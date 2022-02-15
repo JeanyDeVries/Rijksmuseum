@@ -4,6 +4,8 @@ onload = getData(api_url);
 
 function getData(url)
 {
+    const stateDisplay = $('section');
+    stateDisplay.textContent = "Error while loading";
     
     fetch(url)
     .then(function(response) 
@@ -12,6 +14,7 @@ function getData(url)
     })
     .then(function(collection){
         console.log(collection);
+        stateDisplay.textContent = "";
 
         const list = $('ul');
         for (let i = 0; i < collection.artObjects.length; i++) {
