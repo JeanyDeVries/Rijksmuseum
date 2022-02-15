@@ -28,7 +28,7 @@ section{
 
 .displayItems{
     display: grid;
-    grid-template-rows: 20% 20%;
+    grid-template-rows: 20% 20% ;
     grid-template-columns: 40% 40%;
     grid-gap: 5%;
     align-items: start;

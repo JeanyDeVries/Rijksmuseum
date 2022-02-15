@@ -1,9 +1,10 @@
 const api_url = "https://www.rijksmuseum.nl/api/nl/collection?key=ixmhN4my&ps=50'"
+
 const stateDisplay = $('section');
 
-onload = getData(api_url);
+onload = getDataCollection(api_url);
 
-function getData(url)
+function getDataCollection(url)
 {
     stateDisplay.textContent = "Loading";
     
@@ -14,22 +15,39 @@ function getData(url)
             stateDisplay.textContent = "";
 
             const list = $('ul');
-            for (let i = 0; i < collection.artObjects.length; i++) {
+            for (let i = 0; i < collection.artObjects.length; i++) 
+            {
+              var id = collection.artObjects[i].objectNumber;
               list.insertAdjacentHTML(
                   "beforebegin",
-                  `<li onclick = "showItem()">
+                  `<li onclick = showItem("${id}")>
                       <img src="${collection.artObjects[i].webImage.url.slice(0, -3) + "=s1000"}" alt="${collection.artObjects[i].title}"/>
                       <h2>${collection.artObjects[i].title}</h2>
                   </li>`)
-              }
+            }
         })
         .catch((error) => {
-
+            console.log(error);
         });
 }
 
-function showItem(){
-  console.log("item clicked");
+function showItem(id){
+    zoomIn();
+    var dataItem = getDataID(id);
+}
+
+function zoomIn(){
+
+}
+
+function getDataID(id){
+    var urlID = "https://www.rijksmuseum.nl/api/nl/collection/" + id + "?key=ixmhN4my&imgonly=true";
+    fetch(urlID)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        return data;
+      });
 }
 
 function $(element) {
