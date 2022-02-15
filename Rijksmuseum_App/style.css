@@ -9,8 +9,15 @@ h1{
     margin-top: 5%;
 }
 
-h2{
-    font-size: 1.5em;
+.displayItems h2{
+    font-size: 1.2em;
+    font-family: system-ui;
+    font-weight: 400;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 section{
@@ -31,13 +38,26 @@ section{
 }
 
 .displayItems li{
-    list-style-type: none;  
-    margin-bottom: 5%;  
+    list-style-type: none;
+    margin-bottom: 5%;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0px rgb(187 187 187);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.displayItems li:hover{
+    opacity: 1;
 }
 
 
-img{
+
+.displayItems img{
     width: 100%;
-    height: 100%;
+    height: 200px;
     display: inline-block;
+    object-fit: cover;
+    border-radius: 10px;
 }

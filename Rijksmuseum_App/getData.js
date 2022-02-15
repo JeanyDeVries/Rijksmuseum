@@ -18,8 +18,8 @@ function getData(url)
                 list.insertAdjacentHTML(
                     "beforebegin",
                     `<li>
-                        <h2>${collection.artObjects[i].title}</h2>
                         <img src="${collection.artObjects[i].webImage.url}" alt="${collection.artObjects[i].title}"/>
+                        <h2>${collection.artObjects[i].title}</h2>
                     </li>`)
                 }
         })
