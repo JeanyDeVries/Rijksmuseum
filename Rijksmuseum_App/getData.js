@@ -11,7 +11,6 @@ function getDataCollection(url)
     fetch(url)
         .then(CheckError)
         .then(function(collection){
-            console.log(collection);
             stateDisplay.textContent = "";
 
             const list = $('ul');
