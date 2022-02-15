@@ -15,17 +15,21 @@ function getData(url)
 
             const list = $('ul');
             for (let i = 0; i < collection.artObjects.length; i++) {
-                list.insertAdjacentHTML(
-                    "beforebegin",
-                    `<li>
-                        <img src="${collection.artObjects[i].webImage.url}" alt="${collection.artObjects[i].title}"/>
-                        <h2>${collection.artObjects[i].title}</h2>
-                    </li>`)
-                }
+              list.insertAdjacentHTML(
+                  "beforebegin",
+                  `<li onclick = "showItem()">
+                      <img src="${collection.artObjects[i].webImage.url.slice(0, -3) + "=s1000"}" alt="${collection.artObjects[i].title}"/>
+                      <h2>${collection.artObjects[i].title}</h2>
+                  </li>`)
+              }
         })
         .catch((error) => {
 
         });
+}
+
+function showItem(){
+  console.log("item clicked");
 }
 
 function $(element) {
