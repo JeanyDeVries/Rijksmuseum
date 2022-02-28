@@ -39,6 +39,10 @@ function zoomIn(){
 
 }
 
+function searchData(){
+  console.log("search")
+}
+
 function getDataID(id){
     var urlID = "https://www.rijksmuseum.nl/api/nl/collection/" + id + "?key=ixmhN4my&imgonly=true";
     fetch(urlID)

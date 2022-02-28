@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <script type = module src = "scripts/fetchData.js"></script>
     <title>Rijksmuseum</title>
 </head>
 <body>
     <nav>
         <header>
             <h1>Rijksmuseum</h1>
-            <input type = "text" placeholder="Search">
+            <input id = "searchBar" onkeyup="searchData()" type = "text" placeholder="Search">
         </header>
 
         <div class = "menu">
@@ -33,7 +34,5 @@
     <section>
 
     </section>
-    
-    <script src="scripts/getData.js"></script>
-</body>
+    </body>
 </html>
