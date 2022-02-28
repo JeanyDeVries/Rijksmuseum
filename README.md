@@ -44,8 +44,20 @@ for (let i = 0; i < collection.artObjects.length; i++)
 ```
 
 ## Specific Item API <a name="SpecificItemAPI">
+I got the data from the API mentioned before, but sadly to get more specific information about a item you need a different API. I needed to make another fetch with another link to make this work, see code below. In the fetch before, I said in the list item that with the onclick it shows the item and gives the ID, which is important. We need the ID to grab the correct url for the API. 
+  
+```
+var urlID = "https://www.rijksmuseum.nl/api/nl/collection/" + id + "?key=ixmhN4my&imgonly=true";
+fetch(urlID)
+  .then(response => response.json())
+  .then(data => {
+    return data;
+  });
+}  
+```
   
 ## Modules <a name="Modules">
 
   
 ## Issues <a name="Issues">
+If you see any issues in my code or spots that need improvements let me know. You can file an issue in this repository. Thank you!
