@@ -1,9 +1,9 @@
-import { stateDisplay } from "./fetchData.js";
+import { loadingText } from "./fetchData.js";
 import { $ } from "./getElement.js";
 import { showItem } from "./showItem.js";
 
 export function renderHTML(collection){
-    stateDisplay.textContent = "";
+    loadingText.textContent = "";
 
     const list = $('ul');
     for (let i = 0; i < collection.artObjects.length; i++) 
