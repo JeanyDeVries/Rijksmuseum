@@ -1,10 +1,9 @@
 import { loadingText } from "./fetchData.js";
 import { $ } from "./getElement.js";
 import { showItem } from "./showItem.js";
+import { checkState } from "./states.js";
 
 export function renderHTML(collection){
-    loadingText.textContent = "";
-
     const list = $('ul');
     for (let i = 0; i < collection.artObjects.length; i++) 
     {
@@ -22,4 +21,7 @@ export function renderHTML(collection){
             showItem(id, artPiece)
         })
     })
+
+    loadingText.textContent = "";
+    checkState("#paintings")
 }
