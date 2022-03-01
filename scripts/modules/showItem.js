@@ -3,14 +3,16 @@ import { getDataID } from "./getItemData.js";
 
 export function showItem(id, object){
     getDataID(id);
-    popUp(object);
+    console.log(dataMuseum);
+    setTimeout(() => {      
+        popUp(object);
+    }, 700);    
 }
 
-function popUp(object){
+function popUp(){
     var artPiece = document.getElementById("artPiece");
     var span = document.getElementsByClassName("close")[0];
 
-    object.style.scale = (1, 1);
     artPiece.style.display = "block";
 
     //When the button or outside is clicked, the display will be hidden
@@ -31,12 +33,12 @@ function popUp(object){
 
 var artPieceContent = document.getElementById("content");
 function displayContent(){
-
     //display content
     artPieceContent.insertAdjacentHTML(
         "beforeend",
         `<img src="${dataMuseum.artObject.webImage.url}" alt="${dataMuseum.artObject.title}"/>
         <h2>${dataMuseum.artObject.title}</h2>
+        <h3>${dataMuseum.artObject.dating.presentingDate}</h3>
         <p>${dataMuseum.artObject.description}</p>`)
 }
 

@@ -99,7 +99,7 @@ section{
 
 .displayItems{
     display: grid;
-    grid-template-rows: 20% 20% ;
+    grid-auto-rows: 200px;
     grid-template-columns: 40% 40%;
     grid-gap: 3%;
     align-items: start;
@@ -198,6 +198,39 @@ section{
       border-radius: 10px;
       margin: 0 auto;
   }
+
+  .artPiece-content h2{
+    font-size: 5vh;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 0.4%;
+    margin-top: 1%;
+    font-family: 'Roboto Serif', sans-serif;
+    font-weight: 500;
+}
+
+.artPiece-content h3{
+    font-size: 3.5vh;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 0.4%;
+    margin-top: 1%;
+    font-family: 'Roboto Serif', sans-serif;
+    font-weight: 500;
+}
+
+.artPiece-content p{
+    font-size: 2vh;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 0.4%;
+    margin-top: 1%;
+    font-family: 'Roboto Serif', sans-serif;
+    font-weight: 500;
+}
   
   /* The Close Button */
   .close {
