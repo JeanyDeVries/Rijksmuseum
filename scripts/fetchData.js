@@ -4,19 +4,34 @@ import { checkState } from "./states.js";
 
 const api_url = "https://www.rijksmuseum.nl/api/nl/collection?key=ixmhN4my&ps=10&imgonly=true"
 export const loadingText = document.getElementById("loadingText");;
+export const loadingElement = document.getElementById("loadElement");
+
 
 onload = fetchData(api_url);
 
 function fetchData(url){
     checkState("#loading");
-    loadingText.textContent = "Loading";
     fetch(url)
-        .then(CheckError)
+        .then(response => {
+            if(response.status >= 200 && response.status <= 299)
+                return response.json();
+            else
+                CheckError(response)
+        })
         .then(function(collection){
-            checkState("#paintings");
             renderHTML(collection);
         })
         .catch((error) => {
             console.log(error);
         });
 }
+
+/*
+function checkInternetConnection() {
+    var isOnLine = navigator.onLine;
+     if (isOnLine) {
+        fetchData(api_url)
+     } else {
+       alert("no internet");
+     }
+  }*/
