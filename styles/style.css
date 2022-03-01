@@ -51,7 +51,7 @@ header input[type=text]:focus {
     transform: scale(1.5, 1.5);
   }
 
-  .menu{
+.menu{
     bottom: 0%;
     position: fixed;
     display: inline-flex;
@@ -63,10 +63,10 @@ header input[type=text]:focus {
     border: 2px solid white;
     left: 50%;
     transform: translateX(-50%);
-  }
+}
 
 .displayItems h2{
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-family: system-ui;
     font-weight: 400;
     height: 80px;
@@ -81,6 +81,20 @@ section{
     text-align: center;
 }
 
+.displayedItem{
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    display: block;
+    width: 50vw;
+    height: 60vh;
+    z-index: 100;
+    list-style-type: none;
+    border-radius: 10px;
+    left: 25%;
+    bottom: 20%;
+}
+
 .displayItems{
     display: grid;
     grid-template-rows: 20% 20% ;
@@ -93,18 +107,18 @@ section{
     text-align: center;
 }
 
-.displayItems li{
+.displayItems button{
     list-style-type: none;
     margin-bottom: 1vh;
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0 0 12px 0px rgb(187 187 187);
     opacity: 0.6;
-    transition: 0.3s;
+    transition: all 0.3s ease-in;
     background-color: white;
 }
 
-.displayItems li:hover{
+.displayItems button:hover{
     opacity: 1;
     transform: scale(1.1);
     z-index: 10;

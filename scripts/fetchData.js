@@ -1,6 +1,7 @@
 import { renderHTML } from "./renderHTML.js";
 import { CheckError } from "./errorStates.js";
 import { $ } from "./getElement.js";
+import { checkState } from "./states.js";
 
 const api_url = "https://www.rijksmuseum.nl/api/nl/collection?key=ixmhN4my&ps=10&imgonly=true"
 export const stateDisplay = $('section');
@@ -18,3 +19,7 @@ function fetchData(url){
             console.log(error);
         });
 }
+
+window.addEventListener("hashchange", function(){
+    checkState(this.location.hash);
+})
