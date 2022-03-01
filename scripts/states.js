@@ -1,4 +1,5 @@
 export function checkState(hash){
+    console.log(hash);
     switch(hash){
         case "#empty":
         ;
@@ -12,6 +13,5 @@ export function checkState(hash){
             ;
         case "#error":
         ;
-
     }
 }

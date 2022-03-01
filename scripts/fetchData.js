@@ -9,17 +9,19 @@ export const stateDisplay = $('section');
 onload = fetchData(api_url);
 
 function fetchData(url){
+    checkState("#loading");
     stateDisplay.textContent = "Loading";
     fetch(url)
         .then(CheckError)
+       /* .then(response => {
+            CheckError(response);
+            checkState("#error");
+        })*/
         .then(function(collection){
+            checkState("#paintings");
             renderHTML(collection);
         })
         .catch((error) => {
             console.log(error);
         });
 }
-
-window.addEventListener("hashchange", function(){
-    checkState(this.location.hash);
-})
