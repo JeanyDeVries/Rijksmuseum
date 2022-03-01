@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto+Serif:wght@500&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: rgb(201, 186, 177);
 }
@@ -63,20 +67,6 @@ header input[type=text]:focus {
     transform: scale(1.5, 1.5);
   }
 
-.menu{
-    bottom: 0%;
-    position: fixed;
-    display: inline-flex;
-    background-color: rgb(112, 97, 93);
-    width: 40%;
-    height: 5%;
-    z-index: 10;
-    border-radius: 15%;
-    border: 2px solid white;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .displayItems h2{
     font-size: 1.5em;
     font-family: system-ui;
@@ -133,7 +123,7 @@ section{
 .displayItems button:hover{
     opacity: 1;
     transform: scale(1.1);
-    z-index: 10;
+    z-index: 5;
 }
 
 .displayItems img{
@@ -174,7 +164,55 @@ section{
     }
 }
   
+.artPiece {
+    display: none; 
+    position: fixed;
+    z-index: 10; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  /* Art piece content */
+  .artPiece-content {
+    z-index: 10; 
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    height: 60%;
+    border-radius: 5%;
+  }
 
+  .artPiece-content img{
+      position: relative;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 0 auto;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 @media screen and (min-device-width : 1000px){
     h1{
