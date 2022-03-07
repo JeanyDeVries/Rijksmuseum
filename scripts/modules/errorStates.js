@@ -1,4 +1,4 @@
-import { checkState } from "./states.js";
+import { checkState } from "./app.js";
 
 export function CheckError(response) {
     if (response.status >= 400 && response <= 499) {

@@ -1,15 +1,7 @@
 import { renderHTML } from "./renderHTML.js";
 import { CheckError } from "./errorStates.js";
-import { checkState } from "./states.js";
-import { addSearchListeners } from "./search.js";
+import { checkState } from "./app.js";
 
-const api_url = "https://www.rijksmuseum.nl/api/nl/collection?key=ixmhN4my&ps=50&imgonly=true"
-export const loadingText = document.getElementById("loadingText");;
-export const loadingElement = document.getElementById("loadElement");
-
-onload = fetchData(api_url);
-
-addSearchListeners();
 
 export function fetchData(url){
     checkState("loading");
