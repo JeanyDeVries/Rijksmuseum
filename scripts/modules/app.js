@@ -6,9 +6,9 @@ export const loadingText = document.getElementById("loadingText");
 export const loadingElement = document.getElementById("loadElement");
 
 const errorText = document.getElementById("errorText");
+export let currentState = "empty";
 
-
-onload = checkState("empty");
+onload = checkState(currentState);
 addSearchListeners();
 
 window.addEventListener("offline", function() {
@@ -16,11 +16,10 @@ window.addEventListener("offline", function() {
   });
 
 
-export function checkState(state){
-    console.log(state);
-    switch(state){
+export function checkState(currentState){
+    switch(currentState){
         case "empty":
-            fetchData(api_url);
+            fetchData(api_url, "paintings");
             break;
         case "loading":
             loadingText.textContent = "Loading";
@@ -34,16 +33,21 @@ export function checkState(state){
             break;
         case "search":
             //hide html elements
+            console.log("search")
             break;
         case "error":
             hideArtpieces();
             loadingElement.style.display = "none";
             errorText.textContent = "No Internet";
 
-
             //hide html elements
             break;
     }
+}
+
+export function changeState(newState){
+    currentState = newState;
+    checkState();
 }
 
 function hideArtpieces(){

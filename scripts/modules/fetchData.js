@@ -1,19 +1,25 @@
 import { renderHTML } from "./renderHTML.js";
 import { CheckError } from "./errorStates.js";
-import { checkState } from "./app.js";
+import { changeState } from "./app.js";
 
-
-export function fetchData(url){
-    checkState("loading");
+export function fetchData(url, state){
+    changeState("loading");
     fetch(url)
         .then(response => {
-            if(response.status >= 200 && response.status <= 299)
+            if(response.ok)
                 return response.json();
             else
                 CheckError(response)
         })
         .then(function(collection){
-            renderHTML(collection);
+            switch (state){
+                case "paintings":
+                    renderHTML(collection);
+                    break;
+                case "search":
+                    console.log("fetch search")
+                    break;
+            }
         })
         .catch((error) => {
             console.log(error);

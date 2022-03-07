@@ -1,7 +1,7 @@
 import { loadingText} from "./app.js"
 import { $ } from "./getElement.js";
 import { showItem } from "./showItem.js";
-import { checkState } from "./app.js";
+import { changeState } from "./app.js";
 
 export function renderHTML(collection){
     const list = $('ul');
@@ -23,5 +23,5 @@ export function renderHTML(collection){
     })
 
     loadingText.textContent = "";
-    checkState("#paintings")
+    changeState("#paintings")
 }
