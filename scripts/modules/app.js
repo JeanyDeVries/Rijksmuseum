@@ -17,6 +17,7 @@ window.addEventListener("offline", function() {
 
 
 export function checkState(currentState){
+    console.log(currentState)
     switch(currentState){
         case "empty":
             fetchData(api_url, "paintings");
@@ -29,7 +30,7 @@ export function checkState(currentState){
         case "paintings":
             loadingElement.style.display = "none";
             errorText.textContent = "";
-
+            loadingText.textContent = "";
             break;
         case "search":
             //hide html elements

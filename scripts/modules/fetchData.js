@@ -1,11 +1,11 @@
 import { renderHTML } from "./renderHTML.js";
 import { CheckError } from "./errorStates.js";
-import { changeState } from "./app.js";
+import { checkState } from "./app.js";
 
 export let dataMuseum = null;
 
 export function fetchData(url, state){
-    changeState("loading");
+    checkState("loading");
     fetch(url)
         .then(response => {
             if(response.ok)
@@ -14,6 +14,7 @@ export function fetchData(url, state){
                 CheckError(response)
         })
         .then(function(collection){
+            checkState("paintings");
             switch (state){
                 case "paintings":
                     renderHTML(collection);

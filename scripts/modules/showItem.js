@@ -1,5 +1,6 @@
 import { fetchData } from "./fetchData.js";
 import { dataMuseum } from "./fetchData.js";
+import { checkState } from "./app.js";
 
 export function showItem(id, object){
     var urlID = "https://www.rijksmuseum.nl/api/nl/collection/" + id + "?key=ixmhN4my&imgonly=true";
