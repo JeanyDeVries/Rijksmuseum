@@ -19,13 +19,3 @@ export function fetchData(url){
             console.log(error);
         });
 }
-
-/*
-function checkInternetConnection() {
-    var isOnLine = navigator.onLine;
-     if (isOnLine) {
-        fetchData(api_url)
-     } else {
-       alert("no internet");
-     }
-  }*/
