@@ -1,21 +1,18 @@
 import { loadingElement } from "./fetchData.js";
 import { loadingText } from "./fetchData.js";
 
-export function checkState(hash){
-    switch(hash){
-        case "#loading":
+export function checkState(state){
+    switch(state){
+        case "loading":
             loadingText.textContent = "Loading";
             loadingElement.style.display = "block";   
             break;
-        case "#paintings":
+        case "paintings":
             loadingElement.style.display = "none";
             break;
-        case "#paintings/":
-            
+        case "search":
             break;
-        case "#results":
-            break;
-        case "#error":
+        case "error":
             break;
     }
 }

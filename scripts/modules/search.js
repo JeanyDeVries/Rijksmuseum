@@ -10,7 +10,7 @@ export function addSearchListeners() {
 }
 
 function search(){
-    console.log("seach");
+    console.log("search")
     let searchTerm = searchBar.value;
     let url =
         "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb&q=" + searchTerm + "&ps=5";

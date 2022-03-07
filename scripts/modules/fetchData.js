@@ -12,7 +12,7 @@ onload = fetchData(api_url);
 addSearchListeners();
 
 export function fetchData(url){
-    checkState("#loading");
+    checkState("loading");
     fetch(url)
         .then(response => {
             if(response.status >= 200 && response.status <= 299)
