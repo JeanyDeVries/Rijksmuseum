@@ -7,6 +7,7 @@ export function showItem(id, object){
     setTimeout(() => {      
         popUp(object);
     }, 700);    
+    location.hash = "showArtPiece/" + id;
 }
 
 function popUp(){
@@ -43,6 +44,7 @@ function displayContent(){
 }
 
 function removeContent(){
+    location.hash = "showArtPiece";
     while (artPieceContent.firstChild) {
         artPieceContent.removeChild(artPieceContent.firstChild);
     }

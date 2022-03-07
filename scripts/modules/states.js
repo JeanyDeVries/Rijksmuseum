@@ -3,9 +3,6 @@ import { loadingText } from "./fetchData.js";
 
 export function checkState(hash){
     switch(hash){
-        case "#empty":
-
-            break;
         case "#loading":
             loadingText.textContent = "Loading";
             loadingElement.style.display = "block";   
