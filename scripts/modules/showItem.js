@@ -1,8 +1,10 @@
-import { dataMuseum } from "./getItemData.js";
-import { getDataID } from "./getItemData.js";
+import { fetchData } from "./fetchData.js";
+import { dataMuseum } from "./fetchData.js";
 
 export function showItem(id, object){
-    getDataID(id);
+    var urlID = "https://www.rijksmuseum.nl/api/nl/collection/" + id + "?key=ixmhN4my&imgonly=true";
+    
+    fetchData(urlID, "item");
     console.log(dataMuseum);
     setTimeout(() => {      
         popUp(object);
