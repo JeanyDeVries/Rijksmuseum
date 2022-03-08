@@ -18,8 +18,15 @@
 This is the case for the project I have made. You can see some of the art pieces in the main page, but if those are not the ones you seek, you can always use the search bar to search through the library of Rijksmuseum. If you want to see more information about the art-piece you can just click it. 
   
 ## Install Project <a name="Install">
-  - In je CLI plak deze code: git clone https://github.com/JeanyDeVries/Rijksmuseum.git
-  - Cd naar de juiste project folder  
+### Clone this repo
+```
+  $ git clone https://github.com/AronPelgrim/web-app-from-scratch-2122.git
+```
+
+### Navigate to the repo
+```
+$ cd web-app-from-scratch-2122
+```
   
 ## How to use  <a name="HowToUse">
 When you load the page you see multiple artworks displayed. You can see the title and the image from each artwork. But I wanted the user to see the date it has been made plus the description. So if you click an artwork, there will be more information displayed. If you want to go back you can just click outside the pop-up or on the cross on the right top. A nice feature that this project has is the search bar. If you want to look up a specific art piece or art pieces from an artist you can just put the name in the search bar and it will look throught the entire library for you. The results will be displayed if you type your search and press enter. For the results you can also click for more information. If you want to go back to the home page, delete the search bar value and you will be redirected back. 
