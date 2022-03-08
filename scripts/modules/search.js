@@ -8,7 +8,7 @@ const paintings = document.getElementById("displayItems");
 /* search function */
 export function  addSearchListeners() {
     searchBar.addEventListener("keypress", function (e) {
-        if(e.key === `Enter`)
+        if(e.key === "Enter")
             search();
     });
 }

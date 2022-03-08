@@ -56,7 +56,7 @@ export function changeState(newState){
 }
 
 function hideArtpieces(){
-    document.querySelectorAll('.art-piece').forEach((artPiece, index)=>{
+    document.querySelectorAll(".art-piece").forEach((artPiece, index)=>{
         artPiece.style.display = "none";
     })
 }

@@ -14,8 +14,8 @@ export function renderHTML(collection){
               <h2>${collection.artObjects[i].title}</h2>
           </button>`)
     }
-    document.querySelectorAll('.art-piece').forEach((artPiece, index)=>{
-        artPiece.addEventListener('click', ()=>{
+    document.querySelectorAll(".art-piece").forEach((artPiece, index)=>{
+        artPiece.addEventListener("click", ()=>{
             const id = collection.artObjects[index].objectNumber
             location.hash = "showArtPiece";
             showItem(id, artPiece)

@@ -21,8 +21,8 @@ export function renderSearchItems(collection){
               <h2>${collection.artObjects[i].title}</h2>
           </button>`)
     }
-    document.querySelectorAll('.result-piece').forEach((artPiece, index)=>{
-        artPiece.addEventListener('click', ()=>{
+    document.querySelectorAll(".result-piece").forEach((artPiece, index)=>{
+        artPiece.addEventListener("click", ()=>{
             const id = collection.artObjects[index].objectNumber;
             showItem(id, artPiece)
         })
