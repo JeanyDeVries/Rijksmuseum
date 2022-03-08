@@ -1,6 +1,7 @@
 import { renderHTML } from "./renderHTML.js";
 import { CheckError } from "./errorStates.js";
 import { checkState } from "./app.js";
+import { renderSearchItems } from "../renderSearchItems.js";
 
 export let dataMuseum = null;
 
@@ -23,7 +24,7 @@ export function fetchData(url, state){
                     dataMuseum = collection;
                     break;
                 case "search":
-                    console.log("fetch search")
+                    renderSearchItems(collection);
                     break;
             }
         })

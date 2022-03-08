@@ -6,6 +6,8 @@ export const loadingText = document.getElementById("loadingText");
 export const loadingElement = document.getElementById("loadElement");
 
 const errorText = document.getElementById("errorText");
+const noResultsText = document.getElementById("noResultsText");
+
 export let currentState = "empty";
 
 onload = checkState(currentState);
@@ -33,8 +35,13 @@ export function checkState(currentState){
             loadingText.textContent = "";
             break;
         case "search":
-            //hide html elements
-            console.log("search")
+            hideArtpieces();
+            noResultsText.textContent = "";
+            break;
+        case "noSearchResults":
+            console.log("no results")
+            hideArtpieces();
+            noResultsText.textContent = "No results found. \n Try a name like Rembrandt";
             break;
         case "error":
             hideArtpieces();
