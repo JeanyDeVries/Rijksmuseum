@@ -39,7 +39,6 @@ export function checkState(currentState){
             noResultsText.textContent = "";
             break;
         case "noSearchResults":
-            console.log("no results")
             hideArtpieces();
             noResultsText.textContent = "No results found. \n Try a name like Rembrandt";
             break;
@@ -47,8 +46,6 @@ export function checkState(currentState){
             hideArtpieces();
             loadingElement.style.display = "none";
             errorText.textContent = "No Internet";
-
-            //hide html elements
             break;
     }
 }

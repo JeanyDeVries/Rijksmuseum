@@ -5,7 +5,7 @@ const paintings = document.getElementById("displayItems");
 
 
 /* search function */
-export function addSearchListeners() {
+export function  addSearchListeners() {
     searchBar.addEventListener("keyup", function (e) {
         search();
     });

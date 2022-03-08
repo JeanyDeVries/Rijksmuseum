@@ -1,7 +1,7 @@
 import { renderHTML } from "./renderHTML.js";
 import { CheckError } from "./errorStates.js";
 import { checkState } from "./app.js";
-import { renderSearchItems } from "../renderSearchItems.js";
+import { renderSearchItems } from "./renderSearchItems.js";
 
 export let dataMuseum = null;
 

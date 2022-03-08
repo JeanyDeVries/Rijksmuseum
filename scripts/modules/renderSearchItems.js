@@ -1,5 +1,5 @@
-import { checkState } from "./modules/app.js";
-import { $ } from "./modules/getElement.js";
+import { checkState } from "./app.js";
+import { $ } from "./getElement.js";
 
 //If you want to change the search query use a & instead of a ?
 export function renderSearchItems(collection){
