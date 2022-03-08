@@ -60,3 +60,4 @@ function hideArtpieces(){
         artPiece.style.display = "none";
     })
 }
+
