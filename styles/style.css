@@ -113,9 +113,8 @@ section{
 
 .displayItems, .displaySearchResults{
     display: grid;
-    grid-auto-rows: 200px;
-    grid-template-columns: 40% 40%;
-    grid-gap: 3%;
+    grid-template-columns: 35vw 35vw;
+    grid-gap: 5vw;
     align-items: start;
     margin: 0 auto;
     justify-content: center;

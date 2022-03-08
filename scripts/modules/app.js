@@ -1,7 +1,7 @@
 import { fetchData } from "./fetchData.js";
 import { addSearchListeners } from "./search.js";
 
-const api_url = "https://www.rijksmuseum.nl/api/nl/collection?key=ixmhN4my&ps=50&imgonly=true"
+const api_url = "https://www.rijksmuseum.nl/api/nl/collection?key=ixmhN4my&ps=20&imgonly=true"
 export const loadingText = document.getElementById("loadingText");
 export const loadingElement = document.getElementById("loadElement");
 
