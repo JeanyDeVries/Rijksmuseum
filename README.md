@@ -21,7 +21,7 @@ This is the case for the project I have made. You can see some of the art pieces
   - Cd naar de juiste project folder  
   
 ## How to use  <a name="HowToUse">
- 
+When you load the page you see multiple artworks displayed. You can see the title and the image from each artwork. But I wanted the user to see the date it has been made plus the description. So if you click an artwork, there will be more information displayed. If you want to go back you can just click outside the pop-up or on the cross on the right top. A nice feature that this project has is the search bar. If you want to look up a specific art piece or art pieces from an artist you can just put the name in the search bar and it will look throught the entire library for you. The results will be displayed if you type your search and press enter. For the results you can also click for more information. If you want to go back to the home page, delete the search bar value and you will be redirected back. 
  
 ### Activity Diagram 
 To make it more clear how the app functions plus the code within, I made a activity diagrma. This visually shows how it is all put together. 
