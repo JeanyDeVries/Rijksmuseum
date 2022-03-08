@@ -1,27 +1,32 @@
 # Rijksmuseum
 
+![Screenshot_7](https://user-images.githubusercontent.com/44086608/157221688-72205b72-837e-4fc5-a1a5-94a00cd642af.png)
+
+
 ## Table of Contents  
-[User Story](#UserStory)  
-[FlowChart](#FlowChart)  
+[Description](#Description)  
+[Install Project](#Install)  
+[How to use](#HowToUse)  
 [API](#API)  
-[Render Data](#Render)  
-[Specific Item API](#SpecificItemAPI)  
-[Modules](#Modules)  
-[States](#States)  
 [Issues](#Issues)
 
-## UserStory <a name="UserStory">
-As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown.
+
+## Description <a name="Description">
+*As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown.*
+ 
+This is the case for the project I have made. You can see some of the art pieces in the main page, but if those are not the ones you seek, you can always use the search bar to search through the library of Rijksmuseum. If you want to see more information about the art-piece you can just click it. 
   
-## FlowChart <a name="FlowChart">
-To make it more clear how the app functions plus the code within, I made a flowchart. This visually shows how it is all put together. 
+## Install Project <a name="Install">
+  - In je CLI plak deze code: git clone https://github.com/JeanyDeVries/Rijksmuseum.git
+  - Cd naar de juiste project folder  
+  
+## How to use  <a name="HowToUse">
+ 
+ 
+### Activity Diagram 
+To make it more clear how the app functions plus the code within, I made a activity diagrma. This visually shows how it is all put together. 
 
 Click this link to see the flow chart: https://www.figma.com/file/PMzlEesSm2UuJHwQT0Onac/Untitled?node-id=0%3A1. 
-
-Or see the images below: 
-![image](https://user-images.githubusercontent.com/44086608/156916953-97dd6312-6b08-4748-9b07-b422a739e1ed.png)
-![image](https://user-images.githubusercontent.com/44086608/156916968-f7321285-678b-4ac7-bf58-3ac9ba6958b3.png)
-![image](https://user-images.githubusercontent.com/44086608/156916984-354e3066-2134-437d-9e9e-b5e9a77735fc.png)
 
 ## API <a name="API">
 To get the data from Rijksmuseum I used their API. To get the data from the API I used the fetch method, see code below. The specific url I needed to use was: "https://www.rijksmuseum.nl/api/nl/collection?key=ixmhN4my&ps=10&imgonly=true". I then got the data from the "then" in the fetch. 
@@ -36,7 +41,18 @@ fetch(url)
         console.log(error);
     });
 ```
-  
+
+ ## Issues <a name="Issues">
+If you see any issues in my code or spots that need improvements let me know. You can file an issue in this repository. Thank you!
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 ## Render Data <a name="Render">
 We now have the data from the fetch, but it is not displayed yet. To do that I looped through every art object. Then I made a li html with an image and a header 2 for the title. Because we loop through each item, we can get the correct image and title. 
   
@@ -75,5 +91,3 @@ To refactor and tidy up our code, it was necessary to put some code in functions
 I as a programmer used a lot of switch cases with different game states. This way it would be easy to follow where you are in the game. In this case a app. A state each has a different function. For example the loading state needs to display the loading text plus a fun animation to make it more clear it's loading. 
   
   
-## Issues <a name="Issues">
-If you see any issues in my code or spots that need improvements let me know. You can file an issue in this repository. Thank you!
