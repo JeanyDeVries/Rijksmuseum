@@ -84,6 +84,20 @@ Same as before, I rendered the html elements and gave it a pop-up effect.
 
  
 ## Done + future plans <a name="checklist">
+### Done
+- [x] Getting the data
+- [x] Rendering the data
+- [x] Showing specific items
+ -[x] Loading state
+- [x] Internet error state
+- [x] modules
+- [x] States
+ 
+### Future plans
+- [ ] Load more paintings while scrolling
+- [ ] A different styling
+- [ ] Add more error states
+- [ ] Search after some time automatically
 
 ## Issues <a name="Issues">
 If you see any issues in my code or spots that need improvements let me know. You can file an issue in this repository. Thank you!
