@@ -8,6 +8,7 @@
 [Install Project](#Install)  
 [How to use](#HowToUse)  
 [API](#API)  
+[Done + future plans](#checklist)  
 [Issues](#Issues)
 
 
@@ -29,7 +30,14 @@ To make it more clear how the app functions plus the code within, I made a activ
 Click this link to see the flow chart: https://www.figma.com/file/PMzlEesSm2UuJHwQT0Onac/Untitled?node-id=0%3A1. 
 
 ## API <a name="API">
-To get the data from Rijksmuseum I used their API. To get the data from the API I used the fetch method, see code below. The specific url I needed to use was: "https://www.rijksmuseum.nl/api/nl/collection?key=ixmhN4my&ps=10&imgonly=true". I then got the data from the "then" in the fetch. 
+For this project I display artwork from the Rijksmuseum. I have not implemented all the data by myself. I used their public API for it. This API has all the information, images etc. for each artwork. But how does it work?
+ 
+The first step to getting the data from the API is to get the correct url to fetch. In the site it shows that for the url you need a access token/id to make use of it. So I made my own account and got one. I then implemented my own key in the url:
+ 
+The specific url I needed to use was: "https://www.rijksmuseum.nl/api/nl/collection?key=ixmhN4my&ps=10&imgonly=true". 
+You can see that after the collection a key needs to be specified. That is the key I got from my account.
+ 
+For the code I used a fetch with the correct url. In the .then I say that I want to get the collection, which is the data I got from the fetch. I then use the data to render my HTML. 
 
 ```
 fetch(url)
@@ -41,8 +49,30 @@ fetch(url)
         console.log(error);
     });
 ```
+ 
+###Render HTML
+We now have the data from the fetch, but it is not displayed yet. To do that I looped through every art object. I put in my own html element in the unordered list I got (.displayItems ul). I implemented a button with an image and a header 2. I gave the source and title the correct information from the data. I did this by getting the data and then going throught the artobjects array with the for loop and getting the specific title and source from that artobject. 
+ 
+ 
+ ```
+     const list = $('.displayItems ul');
+     for (let i = 0; i < collection.artObjects.length; i++) 
+     {
+       list.insertAdjacentHTML(
+           "beforebegin",
+           `<button class="art-piece">
+               <img src="${collection.artObjects[i].webImage.url.slice(0, -3) + "=s1000"}" alt="${collection.artObjects[i].title}"/>
+               <h2>${collection.artObjects[i].title}</h2>
+           </button>`)
+     }
+ ```
+ 
+###Render specfic item
 
- ## Issues <a name="Issues">
+ 
+## Done + future plans <a name="checklist">
+
+## Issues <a name="Issues">
 If you see any issues in my code or spots that need improvements let me know. You can file an issue in this repository. Thank you!
  
  
