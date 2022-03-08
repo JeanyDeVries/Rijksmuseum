@@ -1,17 +1,26 @@
 # Rijksmuseum
 
 ## Table of Contents  
-[User Story](#UserStory)  
-[FlowChart](#FlowChart)  
-[API](#API)  
+[Description](#Description)  
+[How to use](#HowToUse)  
+[Install Project](#Install)  
 [Render Data](#Render)  
 [Specific Item API](#SpecificItemAPI)  
 [Modules](#Modules)  
 [States](#States)  
 [Issues](#Issues)
 
-## UserStory <a name="UserStory">
-As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown.
+## Description <a name="Description">
+*As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown.*
+ 
+This is the case for the project I have made. You can see some of the art pieces in the main page, but if those are not the ones you seek, you can always use the search bar to search through the library of Rijksmuseum. If you want to see more information about the art-piece you can just click it. 
+  
+## Install Project <a name="Install">
+  - In je CLI plak deze code: git clone https://github.com/JeanyDeVries/Rijksmuseum.git
+  - Cd naar de juiste project folder  
+  
+## How to use  <a name="HowToUse">
+
   
 ## FlowChart <a name="FlowChart">
 To make it more clear how the app functions plus the code within, I made a flowchart. This visually shows how it is all put together. 
