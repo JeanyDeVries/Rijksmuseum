@@ -4,7 +4,7 @@ import { showItem } from "./showItem.js";
 import { changeState } from "./app.js";
 
 export function renderHTML(collection){
-    const list = $('ul');
+    const list = $('.displayItems ul');
     for (let i = 0; i < collection.artObjects.length; i++) 
     {
       list.insertAdjacentHTML(

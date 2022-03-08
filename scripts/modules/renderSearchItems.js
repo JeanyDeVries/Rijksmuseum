@@ -6,14 +6,12 @@ import { showItem } from "./showItem.js";
 export function renderSearchItems(collection){
     checkState("search")
 
-    console.log(collection)
-
     if(collection.artObjects.length === 0){
         checkState("noSearchResults")
         return;
     }
 
-    const list = $('.displaySearchResults');
+    const list = $('.displaySearchResults ul');
     for (let i = 0; i < collection.artObjects.length; i++) 
     {
       list.insertAdjacentHTML(

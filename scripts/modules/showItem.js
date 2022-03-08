@@ -6,9 +6,8 @@ export function showItem(id, object){
     var urlID = "https://www.rijksmuseum.nl/api/nl/collection/" + id + "?key=ixmhN4my&imgonly=true";
     
     fetchData(urlID, "item");
-    console.log(dataMuseum);
     setTimeout(() => {      
-        popUp(object);
+        popUp();
     }, 700);    
     location.hash = "showArtPiece/" + id;
 }
@@ -47,7 +46,6 @@ function displayContent(){
 }
 
 function removeContent(){
-    location.hash = "showArtPiece";
     while (artPieceContent.firstChild) {
         artPieceContent.removeChild(artPieceContent.firstChild);
     }
