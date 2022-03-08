@@ -166,11 +166,15 @@ section{
     width: 100%;
     height: 100%;
     display: flex;
+    position: fixed;
+    top: 50%;
+    z-index: -5;
 }
 
 .lds-dual-ring {
     display: flex;
     left: 50%;
+    top: 50%;
     justify-self: center;
     content: "";
     width: 70px;
@@ -179,6 +183,7 @@ section{
     border: 8px solid #fff;
     border-color: #fff transparent #fff transparent;
     animation: lds-dual-ring 1.2s linear infinite;
+    z-index: 99;
 }
 
 
