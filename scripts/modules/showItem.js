@@ -1,11 +1,11 @@
 import { fetchData } from "./fetchData.js";
 import { dataMuseum } from "./fetchData.js";
-import { checkState } from "./app.js";
 
 export function showItem(id, object){
     var urlID = "https://www.rijksmuseum.nl/api/nl/collection/" + id + "?key=ixmhN4my&imgonly=true";
     
     fetchData(urlID, "item");
+    //Set a time out to let the data be fetched first
     setTimeout(() => {      
         popUp();
     }, 700);    
@@ -46,6 +46,7 @@ function displayContent(){
 }
 
 function removeContent(){
+    //Remove the concent when you want to go back
     while (artPieceContent.firstChild) {
         artPieceContent.removeChild(artPieceContent.firstChild);
     }

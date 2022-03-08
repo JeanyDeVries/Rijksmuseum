@@ -1,9 +1,6 @@
 import { fetchData } from "./fetchData.js";
-import { checkState } from "./app.js";
 
 const searchBar = document.getElementById("searchBar");
-const paintings = document.getElementById("displayItems");
-
 
 /* search function */
 export function  addSearchListeners() {
@@ -18,10 +15,12 @@ function search(){
     const origin = window.location.origin;
 
     if(searchTerm === ""){
+        //If searchterm is empty, go back to the main page
         window.location.href = origin;
         return;
     }
 
+    //Add the searchterm to the url so that the url is correctly for the fetch
     let url =
         "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb&q=" + searchTerm + "&ps=5";
     location.hash = "resultsSearch/" + searchTerm;

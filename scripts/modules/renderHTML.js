@@ -14,10 +14,12 @@ export function renderHTML(collection){
               <h2>${collection.artObjects[i].title}</h2>
           </button>`)
     }
+    //Set an on click event where the item pops
     document.querySelectorAll(".art-piece").forEach((artPiece, index)=>{
         artPiece.addEventListener("click", ()=>{
             const id = collection.artObjects[index].objectNumber
             location.hash = "showArtPiece";
+            //Give the id, which is needed to fetch the correct data
             showItem(id, artPiece)
         })
     })

@@ -7,6 +7,7 @@ export function renderSearchItems(collection){
     checkState("search")
 
     if(collection.artObjects.length === 0){
+        //If there are no objects, no results
         checkState("noSearchResults")
         return;
     }
@@ -21,9 +22,11 @@ export function renderSearchItems(collection){
               <h2>${collection.artObjects[i].title}</h2>
           </button>`)
     }
+    //Set an on click event where the item pops
     document.querySelectorAll(".result-piece").forEach((artPiece, index)=>{
         artPiece.addEventListener("click", ()=>{
             const id = collection.artObjects[index].objectNumber;
+            //Give the id, which is needed to fetch the correct data
             showItem(id, artPiece)
         })
     })

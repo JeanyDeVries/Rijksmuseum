@@ -6,7 +6,10 @@ import { renderSearchItems } from "./renderSearchItems.js";
 export let dataMuseum = null;
 
 export function fetchData(url, state){
+    //Data is not there yet, so loading
     checkState("loading");
+
+    //Fetch the data with the correct url
     fetch(url)
         .then(response => {
             if(response.ok)
@@ -15,12 +18,14 @@ export function fetchData(url, state){
                 CheckError(response)
         })
         .then(function(collection){
+            //Check which state, then render the correct html for it
             checkState("paintings");
             switch (state){
                 case "paintings":
                     renderHTML(collection);
                     break;
                 case "item":
+                    //Set the data correctly for later use in code
                     dataMuseum = collection;
                     break;
                 case "search":

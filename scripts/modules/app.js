@@ -10,23 +10,27 @@ const noResultsText = document.getElementById("noResultsText");
 
 export let currentState = "empty";
 
+//Start with the state empty
 onload = checkState(currentState);
+//Add listener to the search, so I know when the user searches
 addSearchListeners();
 
+//If internet is offline, show error
 window.addEventListener("offline", function() {
     checkState("error");
   });
 
-
+//Check which state it is, then run the code specific for that state
 export function checkState(currentState){
-    console.log(currentState)
     switch(currentState){
         case "empty":
             fetchData(api_url, "paintings");
             break;
         case "loading":
+            //Enable the loading animation + text
             loadingText.textContent = "Loading";
             loadingElement.style.display = "block";   
+            
             errorText.textContent = "";
             break;
         case "paintings":
@@ -55,6 +59,7 @@ export function changeState(newState){
     checkState();
 }
 
+//Hide the pieces from the main page, so it would not be displayed anywhere else
 function hideArtpieces(){
     document.querySelectorAll(".art-piece").forEach((artPiece, index)=>{
         artPiece.style.display = "none";
