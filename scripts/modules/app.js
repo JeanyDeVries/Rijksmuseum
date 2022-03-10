@@ -33,9 +33,7 @@ export function checkState(currentState){
             
             errorText.textContent = "";
             break;
-        case "paintings":
-            deleteSearchResults();
-            showArtpieces();            
+        case "paintings":      
             loadingElement.style.display = "none";
             errorText.textContent = "";
             loadingText.textContent = "";

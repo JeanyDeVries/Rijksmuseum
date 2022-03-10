@@ -18,6 +18,8 @@ function search(){
 
     if(searchTerm === ""){
         //If searchterm is empty, go back to the main page
+        deleteSearchResults();
+        showArtpieces();      
         checkState("paintings");
         window.location.href = '/#paintings';
         return;
