@@ -16,7 +16,7 @@ function search(){
 
     if(searchTerm === ""){
         //If searchterm is empty, go back to the main page
-        window.location.href = origin;
+       // window.location.href = origin;
         return;
     }
 
