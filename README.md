@@ -106,7 +106,6 @@ Same as before, I rendered the html elements and gave it a pop-up effect.
 - [ ] A different styling
 - [ ] Add more error states
 - [ ] Search after some time automatically
-- [ ] Fix a few bugs
 
 
 ## Issues <a name="Issues">
