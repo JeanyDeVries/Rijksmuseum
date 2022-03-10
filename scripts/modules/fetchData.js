@@ -23,6 +23,7 @@ export function fetchData(url, state){
             switch (state){
                 case "paintings":
                     renderHTML(collection);
+                    location.hash = "paintings";
                     break;
                 case "item":
                     //Set the data correctly for later use in code

@@ -1,4 +1,6 @@
 import { fetchData } from "./fetchData.js";
+import { deleteSearchResults, showArtpieces } from "./app.js";
+import { checkState } from "./app.js";
 
 const searchBar = document.getElementById("searchBar");
 
@@ -16,9 +18,12 @@ function search(){
 
     if(searchTerm === ""){
         //If searchterm is empty, go back to the main page
-       // window.location.href = origin;
+        checkState("paintings");
+        window.location.href = '/#paintings';
         return;
     }
+
+    deleteSearchResults();
 
     //Add the searchterm to the url so that the url is correctly for the fetch
     let url =
