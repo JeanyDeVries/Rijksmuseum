@@ -101,6 +101,7 @@ Same as before, I rendered the html elements and gave it a pop-up effect.
 - [x] States
  
 ### Future plans
+- [ ] Load new pages without hiding elements
 - [ ] Load more paintings while scrolling
 - [ ] A different styling
 - [ ] Add more error states
