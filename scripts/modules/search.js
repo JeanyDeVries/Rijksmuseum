@@ -21,7 +21,7 @@ function search(){
         deleteSearchResults();
         showArtpieces();      
         checkState("paintings");
-        window.location.href = 'Rijksmuseum/#paintings';
+        window.location.href = '/#paintings';
         return;
     }
 
