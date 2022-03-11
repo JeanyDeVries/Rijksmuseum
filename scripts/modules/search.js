@@ -29,7 +29,7 @@ function search(){
 
     //Add the searchterm to the url so that the url is correctly for the fetch
     let url =
-        "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb&q=" + searchTerm + "&ps=50";
+        "https://www.rijksmuseum.nl/api/nl/collection?key=2mU4mudb&q=" + searchTerm + "&ps=5";
     location.hash = "resultsSearch/" + searchTerm;
     fetchData(url, "search");
 }
